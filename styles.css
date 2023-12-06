@@ -1,0 +1,59 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style the main navigation bar */
+nav {
+    background-color: #333;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.main-menu li {
+    position: relative;
+}
+
+.main-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* Style submenus */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    padding: 10px;
+}
+
+.submenu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style for the arrow indicating submenu */
+.has-submenu::after {
+    content: '\25BC'; /* Downward-pointing triangle */
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
